@@ -45,14 +45,14 @@ https://github.com/varunon9/Remote-Control-PC/
 
 ## Screeshots
 
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/1.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/2.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/3.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/4.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/5.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/6.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/7.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/8.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/9.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/10.png)
-![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/11.png)
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/1.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/2.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/3.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/4.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/5.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/6.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/7.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/8.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/9.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/10.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/11.png" width="360">
