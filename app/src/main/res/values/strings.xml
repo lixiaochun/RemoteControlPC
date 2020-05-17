@@ -1,0 +1,136 @@
+<resources>
+
+    <string name="app_name">Remote Control PC</string>
+
+    <string name="logo_description">Application Logo</string>
+
+    <!-- Navigation Drawer Strings -->
+
+    <string name="connect">Connect</string>
+
+    <string name="touchpad">Touchpad</string>
+
+    <string name="keyboard">Keyboard</string>
+
+    <string name="file_transfer">File Transfer</string>
+
+    <string name="file_download">File Download</string>
+
+    <string name="media_player">Media Player</string>
+
+    <string name="image_viewer">Image Viewer</string>
+
+    <string name="power_option">Power Options</string>
+
+    <string name="screen_share">Screen Share</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Connect Fragment Strings -->
+
+    <string name="host_ip">Host IP</string>
+
+    <string name="host_port">Host Port</string>
+
+    <string name="connect_button">Connect</string>
+
+    <string name="computer_connected">Connected</string>
+
+    <string name="making_connection">Connecting…</string>
+
+    <string name="computer_not_connected">Connect</string>
+
+    <!-- Touchpad Fragment Strings -->
+
+    <string name="left_click">Left</string>
+
+    <string name="right_click">Right</string>
+
+    <string name="back_button">Back</string>
+
+
+    <!-- Media Player Activity Strings -->
+
+    <string name="music_file">Music File Type</string>
+
+    <string name="volume">Volume</string>
+
+    <string name="pause">Pause</string>
+
+    <string name="pause_music">Pause</string>
+
+    <string name="resume_music">Resume</string>
+
+    <string name="music_track">Music Track</string>
+
+    <!-- Keyboard Fragment Strings -->
+
+    <string name="alt">Alt</string>
+
+    <string name="esc">Esc</string>
+
+    <string name="tab">Tab</string>
+
+    <string name="ctrl">Ctrl</string>
+
+    <string name="n_button">N</string>
+
+    <string name="t_button">T</string>
+
+    <string name="w_button">W</string>
+
+    <string name="r_button">R</string>
+
+    <string name="f_button">F</string>
+
+    <string name="z_button">Z</string>
+
+    <string name="c_button">C</string>
+
+    <string name="x_button">X</string>
+
+    <string name="v_button">V</string>
+
+    <string name="a_button">A</string>
+
+    <string name="o_button">O</string>
+
+    <string name="s_button">S</string>
+
+    <string name="enter">Enter</string>
+
+    <string name="shift">Shift</string>
+
+    <string name="prt_sc">Prt Sc</string>
+
+    <string name="delete">Delete</string>
+
+    <string name="ctrl_z">Ctrl+Z</string>
+
+    <string name="alt_f4">Alt+F4</string>
+
+    <string name="clear_text">Clear</string>
+
+    <string name="backspace">Backspace</string>
+
+    <string name="ctrl_alt_t">Terminal</string>
+
+    <string name="quick_text">Quick Text</string>
+
+    <string name="use_keyboard_shortcuts">Use Keyboard Shortcuts</string>
+
+    <!-- Power Option Fragment Strings -->
+
+    <string name="lock">Lock</string>
+
+    <string name="shutdown">Turnoff</string>
+
+    <string name="restart">Restart</string>
+
+    <string name="suspend">Suspend</string>
+
+    <string name="power_warning">Please, make sure you have saved your work.</string>
+
+</resources>

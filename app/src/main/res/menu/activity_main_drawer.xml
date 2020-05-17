@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_connect"
+            android:icon="@drawable/connect_icon"
+            android:title="@string/connect" />
+        <item
+            android:id="@+id/nav_touchpad"
+            android:icon="@drawable/touchpad_icon"
+            android:title="@string/touchpad" />
+        <item
+            android:id="@+id/nav_keyboard"
+            android:icon="@drawable/keyboard_icon"
+            android:title="@string/keyboard" />
+        <item
+            android:id="@+id/nav_file_transfer"
+            android:icon="@drawable/upload_icon"
+            android:title="@string/file_transfer" />
+        <item
+            android:id="@+id/nav_file_download"
+            android:icon="@drawable/download_icon"
+            android:title="@string/file_download" />
+        <item
+            android:id="@+id/nav_image_viewer"
+            android:icon="@drawable/gallery_icon"
+            android:title="@string/image_viewer" />
+        <item
+            android:id="@+id/nav_media_player"
+            android:icon="@drawable/player_icon"
+            android:title="@string/media_player" />
+
+        <item
+            android:id="@+id/nav_live_screen"
+            android:icon="@drawable/screen_icon"
+            android:title="@string/screen_share" />
+
+        <item
+            android:id="@+id/nav_power_setting"
+            android:icon="@drawable/power_icon"
+            android:title="@string/power_option" />
+
+    </group>
+
+</menu>

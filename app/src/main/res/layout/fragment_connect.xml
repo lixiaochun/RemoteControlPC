@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Container centering the Input Fields -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
+
+        <!-- Input Field for entering IP address. -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ipLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="0.5dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/colorRed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ipAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:hint="@string/host_ip"
+                android:inputType="number|numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Input Field for entering Port Number. -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/portLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:boxStrokeWidth="0.5dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/colorRed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/portNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/host_port"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Button for connecting to Computer -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/connectButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/connect_button"
+        android:textSize="16sp"
+        app:cornerRadius="24dp"
+        app:strokeColor="@color/colorAccent" />
+
+</RelativeLayout>
