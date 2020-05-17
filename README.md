@@ -42,8 +42,8 @@ https://github.com/varunon9/Remote-Control-PC/
 <img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/6.png" width="360">
 <img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/7.png" width="360">
 <img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/8.png" width="360">
-<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/9.png" height="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/9.png" width="360">
 <img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/10.png" width="360">
-<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/11.png" width="360">
+<img src="https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/11.png" height="360">
   
 </p>
