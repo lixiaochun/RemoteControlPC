@@ -116,7 +116,7 @@ public class FileTransferFragment extends Fragment implements View.OnClickListen
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(@NonNull View v) {
 
         int id = v.getId();
 

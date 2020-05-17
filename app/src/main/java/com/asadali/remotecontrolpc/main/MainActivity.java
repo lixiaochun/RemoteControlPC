@@ -1,6 +1,9 @@
 package com.asadali.remotecontrolpc.main;
 
+import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -38,6 +41,9 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 import static android.Manifest.permission;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 // OK - 5 April 2020
 
@@ -78,38 +84,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            checkForPermission();
-        }
-    }
 
-    @TargetApi(Build.VERSION_CODES.M)
-    private void checkForPermission() {
 
-        if (ContextCompat.checkSelfPermission(MainActivity.this, permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(this, READ_EXTERNAL_STORAGE) != PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
 
-            if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this, permission.READ_EXTERNAL_STORAGE)) {
+                askForPermission(READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE);
 
-                Toast.makeText(MainActivity.this, "Read permission is necessary to transfer.", Toast.LENGTH_LONG).show();
+            } else if (ContextCompat.checkSelfPermission(this, READ_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
 
-            } else {
+                askForPermission(READ_EXTERNAL_STORAGE);
 
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{permission.READ_EXTERNAL_STORAGE}, 1);
+            } else if (ContextCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
+
+                askForPermission(WRITE_EXTERNAL_STORAGE);
 
             }
+
+
         }
     }
 
     @Override
     public void onBackPressed() {
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
+
             drawer.closeDrawer(GravityCompat.START);
+
         } else {
+
             if (doubleBackToExitPressedOnce) {
+
                 super.onBackPressed();
+
                 return;
+
             }
+
             doubleBackToExitPressedOnce = true;
+
             Toast.makeText(this, "Please click back again to exit.", Toast.LENGTH_SHORT).show();
 
             new Handler().postDelayed(new Runnable() {
@@ -246,30 +261,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+    // Method to ask for the Permission to be Granted.
+
+    private void askForPermission(String... permissions) {
+
+        ActivityCompat.requestPermissions(this, permissions, 1);
+
+    }
+
+
+    // Override Method to check if Permission Granted.
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
-        switch (requestCode) {
-            case 2: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this, "Click again to Download.", Toast.LENGTH_SHORT).show();
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-                } else {
-                    Toast.makeText(this, "Failed to Download.", Toast.LENGTH_SHORT).show();
-                }
+        if (requestCode == 1 && grantResults.length > 0) {
+
+            if (grantResults[0] != PERMISSION_GRANTED) {
+
+                Toast.makeText(MainActivity.this, "Read permission is necessary for file transfer.", Toast.LENGTH_LONG).show();
+
+            } else if (grantResults[1] != PERMISSION_GRANTED) {
+
+                Toast.makeText(MainActivity.this, "Write permission is necessary for file download.", Toast.LENGTH_LONG).show();
             }
-            case 1: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    Toast.makeText(this, "Click again to Download.", Toast.LENGTH_SHORT).show();
-
-                } else {
-
-                    Toast.makeText(this, "File Transfer will not Work.", Toast.LENGTH_SHORT).show();
-                }
-            }
         }
     }
 }

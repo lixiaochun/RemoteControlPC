@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import com.asadali.remotecontrolpc.main.MainActivity;
@@ -25,6 +26,8 @@ import com.google.android.material.button.MaterialButton;
 import java.util.Stack;
 
 import file.AvatarFile;
+
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 // OK - 5 April 2020
 
@@ -160,23 +163,17 @@ public class FileDownloadFragment extends Fragment implements View.OnClickListen
 
         if (getActivity() != null) {
 
-            if (getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
 
-                if (getActivity().shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
 
-                    Toast.makeText(getActivity(), "Write Permission is necessary to download", Toast.LENGTH_LONG).show();
-
-                } else {
-
-                    getActivity().requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
-
-                }
             } else {
 
                 downloadFile(name, path);
 
             }
         }
+
     }
 
     private void downloadFile(String name, String path) {
@@ -195,4 +192,19 @@ public class FileDownloadFragment extends Fragment implements View.OnClickListen
         }
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == 1 && grantResults.length > 0 && grantResults[0] == PERMISSION_GRANTED) {
+
+            Toast.makeText(getActivity(), "Click again to download file.", Toast.LENGTH_LONG).show();
+
+        } else {
+
+            Toast.makeText(getActivity(), "Write permission is necessary for file download.", Toast.LENGTH_LONG).show();
+
+        }
+
+    }
 }
