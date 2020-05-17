@@ -1,8 +1,6 @@
 # RemoteControlPC
 *Control your PC using your Android Phone*
 
-## Screeshots
-
 ## Features
 
 *0. Browse your Android Phone files on your Computer.*
@@ -44,3 +42,17 @@
 ## See Original Work
 
 https://github.com/varunon9/Remote-Control-PC/
+
+## Screeshots
+
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/1.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/2.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/3.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/4.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/5.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/6.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/7.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/8.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/9.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/10.png)
+![Image](https://github.com/malikbilal1997/RemoteControlPC/blob/master/art/11.png)
